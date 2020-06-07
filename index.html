@@ -1,49 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
+<head id="real">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap" rel="stylesheet">  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maracanans</title>
-</head>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vertical-scroll.js"></script>
+  </head>
+  
 
-<body>
+ <body>
+
   <header>
-    <img src="assets/icon.png" alt="Icone">
-    <div>
+
+    <a href=""><img src="assets/logo-colorida.svg" alt="Maracanans" class="logo"></a>
+    
+    
+    <!-- <div id="menu">
       <a href="/">Início</a>
       <a href="/solucoes">Nossas soluções</a>
       <a href="/clientes">Nossos clientes</a>
       <a href="/somos">Quem somos</a>
-    </div>
+    </div> -->
+
+    <a href=""><img src="assets/menu.svg" alt="Menu" class="menu"></a>
   </header>
 
+
+
   <div id="inicio">
-    <h1>Precisa de um UP no seu negócio</h1>
+    <h1>
+      <span>Precisa de um UP</span><br> <!-- marcação em SPAN para fazer animação posteriormente -->
+      <span>no seu negócio?</span>
+    </h1>
     <p>Temos a solução pra você!</p>
 
-    <p>></p>
+    <div><a href="#solucoes">
+    <img src="assets/conhecer.svg" class="btn-home">
     <p>CONHECER</p>
+    </div>
+    </a>
   </div>
 
   <div id="solucoes">
     <h2>Nossas soluções</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-    <div>
+    <div class="grade">
       <div>
+        <img src="assets/desv.svg" class="icon-desv">
+        <h3>Desenvolvimento</h3>
+        <p>As melhores soluções estão na palma da sua mão</p>
+
+
         <ul>
-          <li>Desenvolvimento</li>
-          <li>Site informativo</li>
-          <li>Site informativo</li>
+          <li>Web Site</li>
+          <li>Landing Page</li>
         </ul>
       </div>
 
       <div>
+        <img src="assets/com.svg" class="icon-desv">
+        <h3>Comunicação Visual</h3>
+        <p>As melhores soluções estão na palma da</p>
         <ul>
-          <li>Desenvolvimento</li>
-          <li>Site informativo</li>
-          <li>Site informativo</li>
+          <li>Design Gráfico</li>
+          <li>Social Media</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="assets/pub.svg" class="icon-desv">
+        <h3>Marketing</h3>
+        <p>As melhores soluções estão na palma da sua mão</p>
+        <ul>
+          <li>Análise de Dados (Google Analytics)</li>
+          <li>Recompra / Remarketing</li>
+          <li>E-mail Marketing</li>
         </ul>
       </div>
     </div>
@@ -70,6 +104,17 @@
     <h2>Quem somos</h2>
     <p>ksjdfhasdhfk asdfsdfhksadhf sdjfhkdshflksahdkf</p>
   </div>
+
+  <div id="contato">
+    <h2>Contato</h2>
+    <form action="">
+      <input type="text" placeholder="Nome"/>
+      <input type="tel" placeholder="Telefone"/>
+      <input type="textarea" placeholder="Mensagem"/>
+
+    </form>
+  </div>
+
 </body>
 
 </html>

@@ -1,0 +1,159 @@
+html{
+    width: 500vw; /* cada 100vw é igual a qnt de páginas */
+    overflow-y: hidden;
+}
+body{
+    background: #000;
+    margin: 0;
+}
+
+p, h1, h3{
+    margin: 0; padding: 0;
+}
+
+div{
+    color: #fff;
+}
+/* páginas */
+#inicio, #solucoes, #clientes, #somos, #contato{
+    width: 100vw;
+    height: 78vh;
+    float: left;
+    padding-top: 20vh;
+}
+
+#inicio{background: rgb(8, 8, 8);}
+#solucoes{background: #FF460D;}
+#clientes{background: #000}
+#somos{background: #3FBC3F}
+#contato{background: #2E682E;}
+
+#grad{
+    background: rgb(63,188,63);
+    background: linear-gradient(90deg, rgba(63,188,63,1) 0%, rgba(255,70,13,1) 100%);
+    display: none;
+}
+
+/* cabeçalhos */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 90vw;
+    height: 70px;
+    z-index: 1;
+
+    padding: 50px;
+}
+.logo{
+    width: 300px;
+    float: left;
+}
+#menu{
+    display: none; 
+}
+.menu{
+    width: 30px;
+    float: right;
+}
+
+/* INICIO */
+#inicio h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 50pt;
+    margin: 50px 0 0 0;
+}
+#inicio p, #inicio a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;;
+}
+.btn-home{
+    width: 80px;
+}
+#inicio{
+    text-align: center;
+}
+#inicio div{
+    margin: 50px 0 50px 0;
+}
+
+/* SOLUÇÕES */
+#solucoes h2, #solucoes p{
+    text-align: center;
+}
+#solucoes h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 50pt;
+    margin: 50px 0 0 0;
+}
+#solucoes p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#solucoes .grade{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    width: 66vw;
+    margin: 0 auto;
+}
+#solucoes div div {
+    padding: 20px;
+    margin: 30px 0;
+    background: #000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#solucoes div div ul{
+    list-style: none;
+    float: left;
+    clear: both;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+}
+#solucoes div div ul li{
+    border: #FF460D 1px solid;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #FF460D;
+    width: 100%;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+#solucoes div div h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #FF460D;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+#solucoes div div p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #CCC;
+    text-align: left;
+    font-size: 13px;
+    margin: 0;
+}
+.icon-desv{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    float:left;
+}
