@@ -1,5 +1,5 @@
 html{
-    width: 500vw; /* cada 100vw é igual a qnt de páginas */
+    width: 540vw; /* cada 100vw é igual a qnt de páginas */
     overflow-y: hidden;
 }
 body{
@@ -15,12 +15,17 @@ div{
     color: #fff;
 }
 /* páginas */
-#inicio, #solucoes, #clientes, #somos, #contato{
-    width: 100vw;
+#solucoes, #clientes, #somos, #contato{
+    width: 110vw;
     height: 78vh;
     float: left;
     padding-top: 20vh;
 }
+#inicio{
+width: 100vw;
+height: 78vh;
+float: left;
+padding-top: 20vh;}
 
 #inicio{background: rgb(8, 8, 8);}
 #solucoes{background: #FF460D;}
@@ -45,16 +50,40 @@ header{
 
     padding: 50px;
 }
-.logo{
-    width: 300px;
+#logo{
+    height: 70px;
     float: left;
 }
 #menu{
-    display: none; 
+    display: none;
+    position: fixed;
+    background: #FF460D;
+    width: 500px;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+    float: right;
+    right: 0;
+    z-index: 1000;
 }
 .menu{
     width: 30px;
     float: right;
+    cursor: pointer;
+}
+#menu li{
+    list-style: none;
+    margin-top: 25px; 
+}
+#menu li a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30pt;
+    text-decoration: none;
+    color: #fff;
+}
+#menu li a:hover{
+    margin-left: 20px;
 }
 
 /* INICIO */
@@ -82,10 +111,10 @@ header{
 }
 
 /* SOLUÇÕES */
-#solucoes h2, #solucoes p{
+#solucoes h2, #solucoes p, #clientes h2, #clientes p, #somos h2, #contato h2{
     text-align: center;
 }
-#solucoes h2{
+#solucoes h2, #clientes h2, #somos h2, #contato h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 50pt;
@@ -156,4 +185,71 @@ header{
     height: 70px;
     margin-right: 10px;
     float:left;
+}
+
+/* CLIENTES */
+#clientes{
+    position: relative;
+}
+#clientes ul{
+    list-style: none;
+    position: absolute;
+    bottom: -16px;
+}
+#clientes ul li{
+  background: #FF460D;
+  width: 150px;
+  height: 300px;
+  margin: 0 20px;
+  float: left;
+}
+#clientes ul li img{
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    margin-top: -70px;
+}
+/* QUEM SOMOS */
+#somos p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 150px 0 20px 300px;
+    width: 500px;
+}
+/* CONTATO */
+.contato{
+    width: 500px;
+    margin: 0 auto;
+}
+.contato input{
+    background: #204C20;
+    border: 1pt solid #408240;
+    padding: 20px;
+    margin: 10px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#form-col-um{
+    float: left;
+    width: 50%;
+}
+#form-col-dois{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+.mensagem{
+    height: 200px;
+}
+.contato button{
+    width: 100%;
+    background: #3FBC3F;
+    border: 1pt solid #408240;
+    padding: 20px;
+    margin: 10px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }

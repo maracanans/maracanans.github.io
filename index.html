@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="myDIV" onscroll="myFunction()">
 
 <head id="real">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap" rel="stylesheet">  <meta charset="UTF-8">
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js" charset="UTF-8"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maracanans</title>
   <link rel="stylesheet" href="css/style.css">
@@ -11,23 +12,32 @@
   
 
  <body>
+  <nav id="menu" onmouseleave="esconderMenu()">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#solucoes">Nossas soluções</a></li>
+<li><a href="#clientes">Nossos clientes</a></li>
+<li><a href="#somos">Quem somos</a></li>
+<li><a href="#contato">Contato</a></li>
 
+
+<footer>
+  (R) Maracanans 2020 - Todos os direitos reservados.
+</footer>
+  </nav>
+  <script>
+
+function exibirMenu() {
+    document.getElementById("menu").style.display = "block"; }
+
+function esconderMenu() {
+    document.getElementById("menu").style.display = "none"; }
+  </script>
   <header>
 
-    <a href=""><img src="assets/logo-colorida.svg" alt="Maracanans" class="logo"></a>
-    
-    
-    <!-- <div id="menu">
-      <a href="/">Início</a>
-      <a href="/solucoes">Nossas soluções</a>
-      <a href="/clientes">Nossos clientes</a>
-      <a href="/somos">Quem somos</a>
-    </div> -->
-
-    <a href=""><img src="assets/menu.svg" alt="Menu" class="menu"></a>
+    <a href="#"><img src="assets/logo-colorida.svg" alt="Maracanans" id="logo"></a>
+  
+    <a onclick="exibirMenu()"><img src="assets/menu.svg" alt="Menu" class="menu"></a>
   </header>
-
-
 
   <div id="inicio">
     <h1>
@@ -82,39 +92,53 @@
       </div>
     </div>
   </div>
+  
+  <script>
+    /* SCRIPT PARA ALTERAR A LOGO AO ROLAR A PÁGINA */
+    $(window).scroll(function () {
+        if ($(this).scrollLeft() > window.innerWidth) { 
+          document.getElementById("logo").src= "assets/logo-mono.svg";
+        }else {
+            document.getElementById("logo").src= "assets/logo-colorida.svg";
+        }
+    });
+  </script>
+
 
   <div id="clientes">
     <h2>Nossos clientes</h2>
 
-    <div>
-      CK
-    </div>
-    <div>
-      CK
-    </div>
-    <div>
-      CK
-    </div>
-    <div>
-      CK
-    </div>
+    <ul>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+      <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
+    </ul>
+    
   </div>
 
   <div id="somos">
     <h2>Quem somos</h2>
-    <p>ksjdfhasdhfk asdfsdfhksadhf sdjfhkdshflksahdkf</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iste nesciunt, non fuga odio voluptate optio esse necessitatibus, iusto minus reprehenderit sequi dolore alias consequatur quia qui sapiente nihil facilis.</p>
   </div>
 
   <div id="contato">
     <h2>Contato</h2>
-    <form action="">
+    <form action="" class="contato">
+      <div id="form-col-um">
       <input type="text" placeholder="Nome"/>
       <input type="tel" placeholder="Telefone"/>
-      <input type="textarea" placeholder="Mensagem"/>
-
+      <input type="empressa" placeholder="Empressa"/>
+    </div><div id="form-col-dois">
+      <input type="textarea" placeholder="Mensagem" class="mensagem"/>
+    </div>
+    <button>Enviar</button>
     </form>
   </div>
 
 </body>
+
 
 </html>
