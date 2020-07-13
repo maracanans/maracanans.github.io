@@ -105,6 +105,7 @@ header{
 }
 #inicio{
     text-align: center;
+    background: url('../assets/patterns.svg') repeat;
 }
 #inicio div{
     margin: 50px 0 50px 0;
