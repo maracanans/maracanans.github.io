@@ -1,3 +1,17 @@
+@keyframes conhecer{
+    0% { transform: translateX(0px);}
+    25% { transform: translateX(0px);}
+    50% { transform: translateX(20px);}
+    75% { transform: translateX(0px);}
+    100% { transform: translateX(0px);}
+  }
+
+::-webkit-scrollbar {height: 10px;}
+::-webkit-scrollbar-track {background: transparent;}
+::-webkit-scrollbar-thumb {background: #888;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+
 html{
     width: 540vw; /* cada 100vw é igual a qnt de páginas */
     overflow-y: hidden;
@@ -5,6 +19,7 @@ html{
 body{
     background: #000;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p, h1, h3{
@@ -17,13 +32,13 @@ div{
 /* páginas */
 #solucoes, #clientes, #somos, #contato{
     width: 110vw;
-    height: 78vh;
+    height: 80vh;
     float: left;
     padding-top: 20vh;
 }
 #inicio{
 width: 100vw;
-height: 78vh;
+height: 80vh;
 float: left;
 padding-top: 20vh;}
 
@@ -81,9 +96,14 @@ header{
     font-size: 30pt;
     text-decoration: none;
     color: #fff;
+    margin-left: 0px;
+    transition: 0.5s;
 }
 #menu li a:hover{
     margin-left: 20px;
+}
+footer{
+    margin: 20px 0;
 }
 
 /* INICIO */
@@ -102,6 +122,7 @@ header{
 }
 .btn-home{
     width: 80px;
+    animation: conhecer 3s infinite forwards;
 }
 #inicio{
     text-align: center;
@@ -113,6 +134,9 @@ header{
 }
 
 /* SOLUÇÕES */
+#btn-sol{
+    cursor: pointer;
+}
 #solucoes h2, #solucoes p, #clientes h2, #clientes p, #somos h2, #contato h2{
     text-align: center;
 }
@@ -128,16 +152,14 @@ header{
     margin-top: 20px;
 }
 #solucoes .grade{
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
     width: 66vw;
     margin: 0 auto;
 }
 #solucoes div div {
+    float: left;
     padding: 20px;
-    margin: 30px 0;
+    margin: 30px 15px;
     background: #000;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -145,12 +167,12 @@ header{
 }
 #solucoes div div ul{
     list-style: none;
-    float: left;
     clear: both;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 20px 0;
     max-width: 300px;
+    display: none;
 }
 #solucoes div div ul li{
     border: #FF460D 1px solid;
@@ -218,6 +240,7 @@ header{
     font-weight: 300;
     margin: 150px 0 20px 300px;
     width: 500px;
+    color: #204C20;
 }
 /* CONTATO */
 .contato{

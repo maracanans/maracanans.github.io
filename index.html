@@ -15,15 +15,15 @@
   <nav id="menu" onmouseleave="esconderMenu()">
 <li><a href="#inicio">Início</a></li>
 <li><a href="#solucoes">Nossas soluções</a></li>
-<li><a href="#clientes">Nossos clientes</a></li>
 <li><a href="#somos">Quem somos</a></li>
+<li><a href="#clientes">Nossos clientes</a></li>
 <li><a href="#contato">Contato</a></li>
 
-
 <footer>
-  (R) Maracanans 2020 - Todos os direitos reservados.
+  © Maracanans 2020 - Todos os direitos reservados.
 </footer>
   </nav>
+  
   <script>
 
 function exibirMenu() {
@@ -31,7 +31,32 @@ function exibirMenu() {
 
 function esconderMenu() {
     document.getElementById("menu").style.display = "none"; }
+
+
+function exibirSolucoedev() {
+    document.getElementById("dev").style.display = "block"; 
+    document.getElementById("dev").style.cursor = "default"; 
+    document.getElementById("com").style.display = "none"; 
+    document.getElementById("mar").style.display = "none";
+  }
+
+function exibirSolucoecom() {
+    document.getElementById("com").style.display = "block"; 
+    document.getElementById("com").style.cursor = "default"; 
+    document.getElementById("dev").style.display = "none"; 
+    document.getElementById("mar").style.display = "none";
+  }
+
+function exibirSolucoemar() {
+  document.getElementById("mar").style.display = "block";
+  document.getElementById("mar").style.cursor = "default"; 
+  document.getElementById("dev").style.display = "none"; 
+    document.getElementById("com").style.display = "none";
+  }
   </script>
+
+
+
   <header>
 
     <a href="#"><img src="assets/logo-colorida.svg" alt="Maracanans" id="logo"></a>
@@ -58,38 +83,39 @@ function esconderMenu() {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
     <div class="grade">
-      <div>
+      <a onclick="exibirSolucoedev()" id="btn-sol"><div>
         <img src="assets/desv.svg" class="icon-desv">
         <h3>Desenvolvimento</h3>
         <p>As melhores soluções estão na palma da sua mão</p>
-
-
-        <ul>
+        <ul id="dev">
           <li>Web Site</li>
           <li>Landing Page</li>
         </ul>
       </div>
+    </a>
 
-      <div>
+    <a onclick="exibirSolucoecom()"  id="btn-sol"><div>
         <img src="assets/com.svg" class="icon-desv">
         <h3>Comunicação Visual</h3>
         <p>As melhores soluções estão na palma da</p>
-        <ul>
+        <ul id="com">
           <li>Design Gráfico</li>
           <li>Social Media</li>
         </ul>
       </div>
+    </a>
 
-      <div>
+      <a onclick="exibirSolucoemar()"  id="btn-sol"><div>
         <img src="assets/pub.svg" class="icon-desv">
         <h3>Marketing</h3>
         <p>As melhores soluções estão na palma da sua mão</p>
-        <ul>
+        <ul id="mar">
           <li>Análise de Dados (Google Analytics)</li>
           <li>Recompra / Remarketing</li>
           <li>E-mail Marketing</li>
         </ul>
       </div>
+    </a>
     </div>
   </div>
   
@@ -104,6 +130,10 @@ function esconderMenu() {
     });
   </script>
 
+<div id="somos">
+  <h2>Quem somos</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iste nesciunt, non fuga odio voluptate optio esse necessitatibus, iusto minus reprehenderit sequi dolore alias consequatur quia qui sapiente nihil facilis.</p>
+</div>
 
   <div id="clientes">
     <h2>Nossos clientes</h2>
@@ -117,11 +147,6 @@ function esconderMenu() {
       <li><a href="#"><img src="https://revistas.uece.br/public/journals/6/pageHeaderLogoImage_pt_BR.png" style="width:150px; height: 150px;"></a></li>
     </ul>
     
-  </div>
-
-  <div id="somos">
-    <h2>Quem somos</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iste nesciunt, non fuga odio voluptate optio esse necessitatibus, iusto minus reprehenderit sequi dolore alias consequatur quia qui sapiente nihil facilis.</p>
   </div>
 
   <div id="contato">
